@@ -80,6 +80,13 @@ To set the color, use the string this function returns in your next print.
 
 Default is what the function returns if you pass an incorrect color string. Default is also what is used for text in your terminal by default.
 
+Running the function won't set the color by itself, it instead returns the color code that can be used to set the color. This lets you be extremely flexible and interpolate the strings however you want.
+
+### Example:
+```scala
+println(s"${foreground("red")}This is red ${foreground("default")} and this is back to normal")
+```
+
 ---
 
 ```scala
@@ -104,5 +111,12 @@ To set the color, use the string this function returns in your next print.
 * reset
 
 Default is what the function returns if you pass an incorrect color string.
+
+Running the function won't set the color by itself, it instead returns the color code that can be used to set the color. This lets you be extremely flexible and interpolate the strings however you want.
+
+### Example:
+```scala
+println(s"${background("red")}This is red ${background("default")} and this is back to normal")
+```
 
 ---
