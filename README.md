@@ -3,3 +3,20 @@
 BananaTUI Simple ANSI TUI library for Scala 3. With it, you can make option-based TUI interfaces for your programs.
 
 BananaTUI works on nearly all terminal environments and emulators, except for the default terminal that comes with Powershell on Windows.
+
+
+# How to use
+
+Download the library from the releases or from the git repository and add the library source to your project's.
+
+Import the following package:
+```scala
+import bananatui.*
+```
+
+Scala 3 is required for this library.
+
+# Documentation
+
+### [Base functions](doc/base.md)
+### [User input functions](doc/userinput.md)
