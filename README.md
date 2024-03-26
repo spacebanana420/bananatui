@@ -4,6 +4,11 @@ BananaTUI Simple ANSI TUI library for Scala 3. With it, you can make option-base
 
 BananaTUI works on nearly all terminal environments and emulators, except for the default terminal that comes with Powershell on Windows.
 
+<p align="center">
+<img src="image/2.png" width="500"/>
+</p>
+
+*BananaTUI being used to power [Tanuki Launcher](https://github.com/spacebanana420/tanuki)*
 
 # How to use
 
@@ -18,5 +23,7 @@ Scala 3 is required for this library.
 
 # Documentation
 
-### [Base functions](doc/base.md)
-### [User input functions](doc/userinput.md)
+All the library functions are documented below.
+
+#### [Base functions](doc/base.md)
+#### [User input functions](doc/userinput.md)
