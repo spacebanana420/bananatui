@@ -27,3 +27,4 @@ All the library functions are documented below.
 
 #### [Base functions](doc/base.md)
 #### [User input functions](doc/userinput.md)
+#### [Extra functionality](doc/extra.md)
