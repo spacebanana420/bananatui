@@ -81,6 +81,17 @@ The function returns the element of ```l``` the user chose, or an empty string i
 ---
 
 ```scala
+def chooseOption_h(l: Seq[String], size: Int = 3, title: String = "Choose an entry", first: String = "Exit"): Int
+```
+Very similar to ```chooseOption()```, but options are listed horizontally, with ```size``` elements per line.
+
+Groups all elements of ```l``` together nicely, with a ```title``` above, and the first option of name ```first```. The user has to select the value of an option.
+
+The function returns the value the user chose.
+
+---
+
+```scala
 def readInt(txt: String): Int
 ```
 Prints ```txt``` and reads the user input, if the input is not an int, it keeps reading.

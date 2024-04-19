@@ -91,7 +91,7 @@ def chooseOption_astring(l: Array[String], title: String = "Choose an entry", fi
   if i == 0 then ""
   else l(i-1)
 
-def chooseOption_long(l: Seq[String], size: Int = 3, title: String = "Choose an entry", first: String = "Exit"): Int =
+def chooseOption_h(l: Seq[String], size: Int = 3, title: String = "Choose an entry", first: String = "Exit"): Int =
   val txt_list = formList_long(l, size, title, first)
   readLoop(txt_list, l.length)
 
