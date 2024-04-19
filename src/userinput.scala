@@ -50,6 +50,22 @@ private def formList_array(l: Array[String], title: String = "Choose an entry", 
     val line = s"${foreground("green")}${i+1}:${foreground("default")} ${l(i)}\n"
     formList_array(l, title, first, txt + line, i+1)
 
+private def formList_long(
+l: Seq[String], size: Int,
+title: String = "Choose an entry", first: String = "Exit",
+current: Int = 0,
+txt: String = "", i: Int = 0
+): String =
+  if i >= l.length then
+    s"$title\n\n${foreground("green")}0: ${foreground("default")}$first\n\n$txt"
+  else
+    if current >= size-1 then
+      val line = s"${foreground("green")}${i+1}:${foreground("default")} ${l(i)}\n"
+      formList_long(l, size, title, first, 0, txt + line, i+1)
+    else
+      val line = s"${foreground("green")}${i+1}:${foreground("default")} ${l(i)}\t\t"
+      formList_long(l, size, title, first, current + 1, txt + line, i+1)
+
 def readLoop(txt: String, maxval: Int): Int =
   val answer = answerToNumber(spawnAndRead(txt))
   if answer == 0 || (answer > 0 && answer <= maxval) then
@@ -74,6 +90,10 @@ def chooseOption_astring(l: Array[String], title: String = "Choose an entry", fi
   val i = chooseOption_array(l, title, first)
   if i == 0 then ""
   else l(i-1)
+
+def chooseOption_long(l: Seq[String], size: Int = 3, title: String = "Choose an entry", first: String = "Exit"): Int =
+  val txt_list = formList_long(l, size, title, first)
+  readLoop(txt_list, l.length)
 
 def readInt(txt: String): Int =
   val answer = answerToNumber(spawnAndRead(txt))
