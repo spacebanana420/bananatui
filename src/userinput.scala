@@ -95,6 +95,11 @@ def chooseOption_h(l: Seq[String], size: Int = 3, title: String = "Choose an ent
   val txt_list = formList_long(l, size, title, first)
   readLoop(txt_list, l.length)
 
+def chooseOption_hs(l: Seq[String], size: Int = 3, title: String = "Choose an entry", first: String = "Exit"): String =
+  val i = chooseOption_h(l, size, title, first)
+  if i == 0 then ""
+  else l(i-1)
+
 def readInt(txt: String): Int =
   val answer = answerToNumber(spawnAndRead(txt))
   if answer != -1 then
