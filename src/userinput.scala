@@ -34,6 +34,18 @@ def answerToNumber(str: String): Int =
   catch
     case e: Exception => -1
 
+def answerToShort(str: String): Short =
+  try
+    str.toShort
+  catch
+    case e: Exception => -1
+
+def answerToByte(str: String): Byte =
+  try
+    str.toByte
+  catch
+    case e: Exception => -1
+
 def pressToContinue(message: String = ""): String = readUserInput(message + "\n\nPress enter to continue")
 
 private def formList(l: Seq[String], title: String = "Choose an entry", first: String = "Exit", txt: String = "", i: Int = 0): String =
@@ -106,6 +118,20 @@ def readInt(txt: String): Int =
     answer
   else
     readInt(txt)
+
+def readShort(txt: String): Short =
+  val answer = answerToShort(spawnAndRead(txt))
+  if answer != -1 then
+    answer
+  else
+    readShort(txt)
+
+def readByte(txt: String): Byte =
+  val answer = answerToByte(spawnAndRead(txt))
+  if answer != -1 then
+    answer
+  else
+    readByte(txt)
 
 def chooseOption_dir(txt: String): String =
   val answer = spawnAndRead(txt)

@@ -14,3 +14,17 @@ Prints a progress status that can be updated without clearing the whole screen.
 ```first``` should be set to true if this is your first progress print. For all other consecutive prints, it should be ```false``` instead. The difference is that the progress only updates itself if it's set to false, otherwise it just prints the new progress below the old one. Note that ```str``` should remain always the same for your progress calls.
 
 ```usebar``` toggles the use of a progress bar. If you disable it, the progress only shows the percentage.
+
+---
+
+```scala
+def searchList(items: Seq[String], keyword: String, casesensitive: Boolean = false): String
+```
+Searches through a sequence of options/items to find if they match a keyword and then returns the resulting screen string, similar to the chooseOption() functions.
+
+---
+
+```scala
+def searchList_read(items: Seq[String], keyword: String, casesensitive: Boolean = false): Int
+```
+Runs searchList() and prints the returning string and reads the user input, just like chooseOption()

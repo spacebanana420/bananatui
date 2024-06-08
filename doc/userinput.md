@@ -33,6 +33,20 @@ Attempts to convert a string to an int. If the string does not represent an int,
 ---
 
 ```scala
+def answerToShort(str: String): Int
+```
+Attempts to convert a string to a short. If the string does not represent a short, it returns -1.
+
+---
+
+```scala
+def answerToByte(str: String): Int
+```
+Attempts to convert a string to a byte. If the string does not represent a byte, it returns -1.
+
+---
+
+```scala
 def pressToContinue(message: String = ""): String
 ```
 Prints ```message``` with an additional "press enter to continue" and reads user input.
@@ -106,6 +120,20 @@ The function returns the string element, or an empty string if the user chooses 
 def readInt(txt: String): Int
 ```
 Prints ```txt``` and reads the user input, if the input is not an int, it keeps reading.
+
+---
+
+```scala
+def readShort(txt: String): Int
+```
+Prints ```txt``` and reads the user input, if the input is not a short, it keeps reading.
+
+---
+
+```scala
+def readByte(txt: String): Int
+```
+Prints ```txt``` and reads the user input, if the input is not a byte, it keeps reading.
 
 ---
 
