@@ -3,6 +3,15 @@
 Extra TUI functionality.
 
 ```scala
+def windows_enableANSI(): Boolean
+```
+Enables ANSI support for Windows, if not enabled already. Returns true if the command execution works well.
+
+If you intend on running this library on Windows, you most likely have to run this function at the start of your program.
+
+---
+
+```scala
 def printProgress(percentage: Byte, str: String = "", first: Boolean = true, usebar: Boolean = true)
 ```
 Prints a progress status that can be updated without clearing the whole screen.

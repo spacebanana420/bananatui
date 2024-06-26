@@ -1,6 +1,13 @@
 package bananatui
 
+import scala.sys.process.*
 //import scala.io.StdIn.readLine
+
+def windows_enableANSI(): Boolean =
+  try
+    Vector("cmd", "/c", "echo", "").!
+    true
+  catch case e: Exception => false
 
 def printProgress(percentage: Byte, str: String = "", first: Boolean = true, usebar: Boolean = true) =
   def mkBar(chr: Char, amt: Byte, bar: String = "", i: Int = 0): String =
