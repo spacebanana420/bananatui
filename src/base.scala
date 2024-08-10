@@ -25,7 +25,7 @@ def moveCursor(mode: String, lines: Int) =
   else
     print(s"\u001B[${lines}B")
 
-def clearBelowCursor(lines: Int) = print(s"\u001B[0K")
+def clearBelowCursor(lines: Int) = print(s"\u001B[0K") //check the argument later
 
 def printStatus(msg: String, isError: Boolean = true) =
   val default = foreground("default")

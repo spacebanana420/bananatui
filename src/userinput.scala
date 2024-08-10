@@ -23,10 +23,7 @@ def askPrompt(ui: String, clear: Boolean = true): Boolean =
       spawnAndRead(s"\u001B[3J\u001B[1J\u001B[H$ui ${yellow}(y/n)$default\n").toLowerCase
     else
       readUserInput(s"$ui ${yellow}(y/n)$default\n").toLowerCase
-  if answer == "yes" || answer == "y" then
-    true
-  else
-    false
+  answer == "yes" || answer == "y"
 
 def answerToNumber(str: String): Int =
   try
@@ -140,12 +137,12 @@ def readByte(txt: String): Byte =
 
 def chooseOption_dir(txt: String): String =
   val answer = spawnAndRead(txt)
-  if File(answer).isDirectory() then
-    answer
-  else if answer == "" then
+  if answer == "" then
     "."
+  else if File(answer).isDirectory() then
+    answer
   else
-    pressToContinue("That is not a real path in your system!")
+    pressToContinue("That is not a real directory in your system!")
     chooseOption_dir(txt)
 
 def chooseOption_file(txt: String): String =
