@@ -120,3 +120,13 @@ println(s"${background("red")}This is red ${background("default")} and this is b
 ```
 
 ---
+
+```scala
+def resetMode(): String
+def boldMode(enable: Boolean): String
+def dimMode(enable: Boolean): String
+def italicMode(enable: Boolean): String
+def underlineMode(enable: Boolean): String
+```
+
+Toggles different styles/modes.

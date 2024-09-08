@@ -64,3 +64,9 @@ def background(color: String = "default"): String =
     case "default" => "\u001B[49m"
     case "reset" => "\u001B[0m"
     case _ => "\u001B[49m"
+
+  def resetMode(): String = "\u001B[0m"
+  def boldMode(enable: Boolean): String = if enable then "\u001B[1m" else "\u001B[22m"
+  def dimMode(enable: Boolean): String = if enable then "\u001B[2m" else "\u001B[22m"
+  def italicMode(enable: Boolean): String = if enable then "\u001B[3m" else "\u001B[23m"
+  def underlineMode(enable: Boolean): String = if enable then "\u001B[4m" else "\u001B[24m"
